@@ -1,14 +1,17 @@
 🛒 Ecommerce API
 
-🚀 Uma API RESTful desenvolvida em Java + Spring Boot, projetada para gerenciar um sistema de E-Commerce completo.
-Ela permite o cadastro e gerenciamento de clientes, produtos, cupons e pedidos, incluindo a adição de itens aos pedidos e aplicação de cupons de desconto.
+🚀 API RESTful desenvolvida em Java + Spring Boot para gerenciar um sistema completo de E-Commerce.
+Permite o cadastro e gerenciamento de clientes, produtos, cupons e pedidos, incluindo a adição de itens aos pedidos e aplicação de cupons de desconto.
 
-⚙️ Funcionalidades Principais
+⚙️ Funcionalidades
 
-✅ Clientes – Cadastro, consulta, atualização e exclusão
-✅ Produtos – Gerenciamento completo de produtos
-✅ Cupons – Criação e aplicação de descontos
-✅ Pedidos – Criação, consulta, atualização, remoção e adição de itens
+👥 Cadastro, consulta, atualização e exclusão de clientes
+
+📦 Cadastro, consulta, atualização e exclusão de produtos
+
+🎟️ Gerenciamento e aplicação de cupons de desconto
+
+🧾 Criação, consulta, atualização, remoção e adição de itens aos pedidos
 
 🧰 Tecnologias Utilizadas
 Tecnologia	Descrição
@@ -22,60 +25,54 @@ Tecnologia	Descrição
 
 ☕ Java JDK 17+ instalado
 
-🧩 Maven instalado (ou use o wrapper mvnw.cmd)
+🧩 Maven instalado (ou utilize o mvnw.cmd)
 
 ⚙️ 2. Configuração do Banco de Dados
 
-Por padrão, o projeto usa o H2 (em memória).
-Se desejar outro banco (como PostgreSQL), edite o arquivo:
-
+Por padrão, o projeto utiliza o H2 (em memória).
+Para usar outro banco (ex: PostgreSQL), edite o arquivo:
 src/main/resources/application.properties
 
-📦 3. Instalação das Dependências
+📦 3. Instalar Dependências
 
 Abra o terminal na raiz do projeto e execute:
 
-# Usando o Maven Wrapper
 mvnw.cmd clean install
-
-# Ou, se preferir, o Maven local
+# ou
 mvn clean install
 
-▶️ 4. Executando a Aplicação
-# Via Maven Wrapper
+▶️ 4. Executar a Aplicação
 mvnw.cmd spring-boot:run
-
-# Ou via Maven
+# ou
 mvn spring-boot:run
 
 
-Após a execução, acesse:
-👉 http://localhost:8080
+Após a execução, acesse 👉 http://localhost:8080
 
-Use ferramentas como Postman ou Insomnia para testar os endpoints.
-💡 Uma collection pronta para Postman está disponível na pasta Collections.
+💡 Utilize Postman ou Insomnia para testar os endpoints.
+Uma collection pronta para Postman está disponível na pasta Collections.
 
 🌐 Endpoints Principais
 Rota	Descrição
 /clientes	Gerenciamento de clientes
 /produtos	Gerenciamento de produtos
-/cupons	Gerenciamento de cupons de desconto
-/pedidos	Criação e controle de pedidos e itens
+/cupons	Gerenciamento de cupons
+/pedidos	Gerenciamento de pedidos e itens
 🧪 Testes
 
-Execute os testes automatizados com:
+Para rodar os testes automatizados, execute:
 
 mvn test
 
-💡 Boas Práticas e Observações
+💡 Observações
 
-✅ Segue padrões de validação e tratamento de erros.
+✅ Segue boas práticas de validação e tratamento de erros
 
-🧱 Utiliza jakarta.validation para validações (compatível com Spring Boot 3+).
+🧱 Utiliza o pacote jakarta.validation (compatível com Spring Boot 3+)
 
-🧩 Estrutura modular e clara para fácil manutenção e expansão.
+🧩 Estrutura modular, limpa e de fácil manutenção
 
-👨‍💻 Autor
+👨‍💻 Autor: Eric Morales
 
 Projeto desenvolvido com 💙 para fins educacionais na Ada Tech.
 
