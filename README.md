@@ -1,129 +1,99 @@
-🛍️ Ecommerce API – Sistema Completo de Vendas Online
+# 🚀 Ecommerce API
 
-💻 API RESTful desenvolvida em Java + Spring Boot, com arquitetura limpa e integração de múltiplos módulos de negócio: clientes, produtos, cupons e pedidos.
-Ideal para aprendizado de back-end moderno e boas práticas de desenvolvimento com o ecossistema Spring.
+Bem-vindo à API de Ecommerce desenvolvida com Java e Spring Boot! Este projeto foi criado para ser uma base robusta, escalável e didática para sistemas de comércio eletrônico, permitindo o gerenciamento completo de clientes, produtos, cupons e pedidos.
 
-✨ Visão Geral
+---
 
-Esta API permite o gerenciamento completo de um e-commerce, abrangendo:
+## 💡 Sobre o Projeto
 
-👥 Clientes – Cadastro, atualização, consulta e exclusão
+A Ecommerce API é uma solução RESTful que simula operações essenciais de um e-commerce moderno. Ela foi pensada para facilitar integrações, automações e servir como referência para projetos educacionais e profissionais.
 
-📦 Produtos – Controle de estoque e informações
+---
 
-🎟️ Cupons de desconto – Criação, listagem e aplicação
+## ⚙️ Funcionalidades
 
-🧾 Pedidos – Criação, listagem, atualização, remoção e adição de itens
+- **Clientes:** Cadastro, consulta, atualização e remoção
+- **Produtos:** Cadastro, consulta, atualização e remoção
+- **Cupons:** Cadastro, consulta, atualização e remoção
+- **Pedidos:** Criação, consulta, atualização, remoção e adição de itens
+- **Itens do Pedido:** Adição dinâmica de produtos ao pedido
+- **Validação e tratamento de erros:** Respostas claras e padronizadas
 
-⚙️ Tecnologias e Ferramentas
+---
 
-🚀 Back-end Principal
+## 🛠️ Tecnologias Utilizadas
 
-☕ Java 17+
+- **Java 17+**
+- **Spring Boot 3+**
+- **Spring Data JPA & Hibernate**
+- **Banco de dados relacional** (H2, PostgreSQL, etc.)
+- **Maven**
 
-🌱 Spring Boot 3+
+---
 
-🗄️ Spring Data JPA / Hibernate
+## 🚦 Como Executar
 
-📘 Jakarta Validation
+1. **Pré-requisitos:**
+   - Java JDK 17 ou superior
+   - Maven
 
-💾 Banco de Dados
+2. **Configuração do Banco de Dados:**
+   - Por padrão, utiliza H2 em memória. Para outro banco, edite `src/main/resources/application.properties`.
 
-🧠 H2 (memória) – padrão
+3. **Instalação das Dependências:**
+   ```cmd
+   mvnw.cmd clean install
+   ```
+   Ou:
+   ```cmd
+   mvn clean install
+   ```
 
-🐘 PostgreSQL (opcional)
+4. **Execução da Aplicação:**
+   ```cmd
+   mvnw.cmd spring-boot:run
+   ```
+   Ou:
+   ```cmd
+   mvn spring-boot:run
+   ```
 
-🧰 Build & Dependências
+5. **Acesso à API:**
+   - URL padrão: `http://localhost:8080`
+   - Teste os endpoints com Postman ou Insomnia. Uma collection pronta para Postman está na pasta `Collections`.
 
-📦 Maven
+---
 
-🧪 Testes
+## 📚 Endpoints Principais
 
-🧱 JUnit / Spring Boot Test
+| Recurso    | Endpoint                | Descrição                       |
+|------------|------------------------|---------------------------------|
+| Clientes   | `/clientes`            | Gerenciamento de clientes       |
+| Produtos   | `/produtos`            | Gerenciamento de produtos       |
+| Cupons     | `/cupons`              | Gerenciamento de cupons         |
+| Pedidos    | `/pedidos`             | Gerenciamento de pedidos/itens  |
 
-🏗️ Como Executar o Projeto
-🔧 1. Pré-requisitos
+---
 
-☕ Java JDK 17+
+## 🧪 Testes Automatizados
 
-🧩 Maven instalado (ou use o wrapper mvnw.cmd)
-
-⚙️ 2. Configuração do Banco de Dados
-
-O projeto usa o H2 Database como padrão (em memória).
-Para alterar para outro banco (ex: PostgreSQL), edite o arquivo:
-
-src/main/resources/application.properties
-
-📦 3. Instalar Dependências
-
-No terminal da raiz do projeto, execute:
-
-mvnw.cmd clean install
-# ou
-mvn clean install
-
-▶️ 4. Executar a Aplicação
-
-Inicie o servidor com:
-
-mvnw.cmd spring-boot:run
-# ou
-mvn spring-boot:run
-
-
-Após iniciar, acesse:
-🌐 http://localhost:8080
-
-💡 Dica: Utilize Postman ou Insomnia para testar os endpoints.
-Uma collection pronta para Postman está disponível na pasta Collections.
-
-🌐 Principais Endpoints
-Método	Endpoint	Descrição
-GET	/clientes	Lista todos os clientes
-POST	/clientes	Cadastra um novo cliente
-GET	/produtos	Lista todos os produtos
-POST	/produtos	Cadastra um novo produto
-GET	/cupons	Lista todos os cupons
-POST	/cupons	Cadastra um novo cupom
-GET	/pedidos	Lista pedidos cadastrados
-POST	/pedidos	Cria um novo pedido
-🧪 Rodando os Testes
-
-Para executar os testes automatizados:
-
+Execute os testes para garantir a qualidade do projeto:
+```cmd
 mvn test
+```
 
-💡 Boas Práticas Adotadas
+---
 
-✅ Arquitetura limpa e modular
+## 📝 Observações Importantes
+- Validação de dados com `jakarta.validation` (Spring Boot 3+)
+- Tratamento de erros padronizado
+- Código limpo e pronto para extensão
 
-🧱 Camadas bem definidas: Controller → Service → Repository → Entity
+---
 
-🧩 Uso de DTOs e validação com Jakarta Validation
+## 👨‍💻 Autoria & Propósito
+Projeto desenvolvido para fins educacionais na Ada Tech, com foco em boas práticas, clareza e escalabilidade.
 
-⚠️ Tratamento centralizado de exceções
+---
 
-🧠 Código comentado e fácil de manter
-
-🧠 Exemplo de Arquitetura
-src/
- ┣ 📁 main
- ┃ ┣ 📁 java/com/ecommerce
- ┃ ┃ ┣ 📁 controller
- ┃ ┃ ┣ 📁 service
- ┃ ┃ ┣ 📁 repository
- ┃ ┃ ┗ 📁 model
- ┃ ┗ 📁 resources
- ┃   ┗ 📄 application.properties
- ┗ 📁 test
-
-👨‍💻 Autor
-
-📌 Desenvolvido por: Eric Morales
-🎓 Projeto educacional – Ada Tech
-💬 “Aprender na prática é o melhor caminho para dominar o código.”
-
-🏷️ Licença
-
-Este projeto foi desenvolvido para fins educacionais e pode ser utilizado livremente para estudo e aprimoramento técnico.
+**Explore, contribua e aprenda!**
