@@ -1,79 +1,129 @@
-🛒 Ecommerce API
+🛍️ Ecommerce API – Sistema Completo de Vendas Online
 
-🚀 API RESTful desenvolvida em Java + Spring Boot para gerenciar um sistema completo de E-Commerce.
-Permite o cadastro e gerenciamento de clientes, produtos, cupons e pedidos, incluindo a adição de itens aos pedidos e aplicação de cupons de desconto.
+💻 API RESTful desenvolvida em Java + Spring Boot, com arquitetura limpa e integração de múltiplos módulos de negócio: clientes, produtos, cupons e pedidos.
+Ideal para aprendizado de back-end moderno e boas práticas de desenvolvimento com o ecossistema Spring.
 
-⚙️ Funcionalidades
+✨ Visão Geral
 
-👥 Cadastro, consulta, atualização e exclusão de clientes
+Esta API permite o gerenciamento completo de um e-commerce, abrangendo:
 
-📦 Cadastro, consulta, atualização e exclusão de produtos
+👥 Clientes – Cadastro, atualização, consulta e exclusão
 
-🎟️ Gerenciamento e aplicação de cupons de desconto
+📦 Produtos – Controle de estoque e informações
 
-🧾 Criação, consulta, atualização, remoção e adição de itens aos pedidos
+🎟️ Cupons de desconto – Criação, listagem e aplicação
 
-🧰 Tecnologias Utilizadas
-Tecnologia	Descrição
-☕ Java 17+	Linguagem principal
-🌱 Spring Boot 3+	Framework para criação da API
-🗄️ Spring Data JPA / Hibernate	Persistência e mapeamento objeto-relacional
-💾 Banco de Dados	H2 (padrão), PostgreSQL ou outro relacional
-📦 Maven	Gerenciamento de dependências e build
+🧾 Pedidos – Criação, listagem, atualização, remoção e adição de itens
+
+⚙️ Tecnologias e Ferramentas
+
+🚀 Back-end Principal
+
+☕ Java 17+
+
+🌱 Spring Boot 3+
+
+🗄️ Spring Data JPA / Hibernate
+
+📘 Jakarta Validation
+
+💾 Banco de Dados
+
+🧠 H2 (memória) – padrão
+
+🐘 PostgreSQL (opcional)
+
+🧰 Build & Dependências
+
+📦 Maven
+
+🧪 Testes
+
+🧱 JUnit / Spring Boot Test
+
 🏗️ Como Executar o Projeto
-🪄 1. Pré-requisitos
+🔧 1. Pré-requisitos
 
-☕ Java JDK 17+ instalado
+☕ Java JDK 17+
 
-🧩 Maven instalado (ou utilize o mvnw.cmd)
+🧩 Maven instalado (ou use o wrapper mvnw.cmd)
 
 ⚙️ 2. Configuração do Banco de Dados
 
-Por padrão, o projeto utiliza o H2 (em memória).
-Para usar outro banco (ex: PostgreSQL), edite o arquivo:
+O projeto usa o H2 Database como padrão (em memória).
+Para alterar para outro banco (ex: PostgreSQL), edite o arquivo:
+
 src/main/resources/application.properties
 
 📦 3. Instalar Dependências
 
-Abra o terminal na raiz do projeto e execute:
+No terminal da raiz do projeto, execute:
 
 mvnw.cmd clean install
 # ou
 mvn clean install
 
 ▶️ 4. Executar a Aplicação
+
+Inicie o servidor com:
+
 mvnw.cmd spring-boot:run
 # ou
 mvn spring-boot:run
 
 
-Após a execução, acesse 👉 http://localhost:8080
+Após iniciar, acesse:
+🌐 http://localhost:8080
 
-💡 Utilize Postman ou Insomnia para testar os endpoints.
+💡 Dica: Utilize Postman ou Insomnia para testar os endpoints.
 Uma collection pronta para Postman está disponível na pasta Collections.
 
-🌐 Endpoints Principais
-Rota	Descrição
-/clientes	Gerenciamento de clientes
-/produtos	Gerenciamento de produtos
-/cupons	Gerenciamento de cupons
-/pedidos	Gerenciamento de pedidos e itens
-🧪 Testes
+🌐 Principais Endpoints
+Método	Endpoint	Descrição
+GET	/clientes	Lista todos os clientes
+POST	/clientes	Cadastra um novo cliente
+GET	/produtos	Lista todos os produtos
+POST	/produtos	Cadastra um novo produto
+GET	/cupons	Lista todos os cupons
+POST	/cupons	Cadastra um novo cupom
+GET	/pedidos	Lista pedidos cadastrados
+POST	/pedidos	Cria um novo pedido
+🧪 Rodando os Testes
 
-Para rodar os testes automatizados, execute:
+Para executar os testes automatizados:
 
 mvn test
 
-💡 Observações
+💡 Boas Práticas Adotadas
 
-✅ Segue boas práticas de validação e tratamento de erros
+✅ Arquitetura limpa e modular
 
-🧱 Utiliza o pacote jakarta.validation (compatível com Spring Boot 3+)
+🧱 Camadas bem definidas: Controller → Service → Repository → Entity
 
-🧩 Estrutura modular, limpa e de fácil manutenção
+🧩 Uso de DTOs e validação com Jakarta Validation
 
-👨‍💻 Autor: Eric Morales
+⚠️ Tratamento centralizado de exceções
 
-Projeto desenvolvido com 💙 para fins educacionais na Ada Tech.
+🧠 Código comentado e fácil de manter
 
-“Aprender na prática é o melhor caminho para dominar o código.”
+🧠 Exemplo de Arquitetura
+src/
+ ┣ 📁 main
+ ┃ ┣ 📁 java/com/ecommerce
+ ┃ ┃ ┣ 📁 controller
+ ┃ ┃ ┣ 📁 service
+ ┃ ┃ ┣ 📁 repository
+ ┃ ┃ ┗ 📁 model
+ ┃ ┗ 📁 resources
+ ┃   ┗ 📄 application.properties
+ ┗ 📁 test
+
+👨‍💻 Autor
+
+📌 Desenvolvido por: Eric Morales
+🎓 Projeto educacional – Ada Tech
+💬 “Aprender na prática é o melhor caminho para dominar o código.”
+
+🏷️ Licença
+
+Este projeto foi desenvolvido para fins educacionais e pode ser utilizado livremente para estudo e aprimoramento técnico.
